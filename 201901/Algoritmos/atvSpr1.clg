@@ -1,4 +1,4 @@
-algoritmo semNome;
+algoritmo inscricaoAcademia;
 // Síntese: Cadastro de clientes com escrita em tela das entradas
 //  Objetivo:  Coletar e exibir dados dos clientes da academia
 //  Entrada : Usuário escreve dados
