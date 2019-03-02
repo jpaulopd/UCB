@@ -1,0 +1,57 @@
+algoritmo semNome;
+// Síntese: Cadastro de clientes com escrita em tela das entradas
+//  Objetivo:  Coletar e exibir dados dos clientes da academia
+//  Entrada : Usuário escreve dados
+//  Saída   : Dados clientes são escritos na tela
+
+
+principal
+	// Declarações: tipifica as variáveis que serão utilizadas no cadastro
+	texto nomeCliente;
+	inteiro idadeCliente;
+	texto enderecoCliente;
+	texto telefoneEmergenciaCliente;
+	texto objetivo1Cliente;
+	texto objetivo2Cliente;
+	texto doencasCliente;
+	// Instruções: 1) realiza a coleta dos dados 2) escreve dados em tela
+
+	//Coleta dos dados 
+		escreval("					 ACADEMIA SAÚDE ETERNA					");
+		escreval("------------------------ Insira os dados requeriidos do cliente -----------------------");
+		escreval("");
+		
+		escreva("Nome do cliente: ");
+		leia(nomeCliente);
+
+		escreva("Idade: : ");
+		leia(idadeCliente);
+
+		escreva("Endereço completo: ");
+		leia(enderecoCliente);
+
+		escreva("Telefone para contato em caso de emergência: ");
+		leia(telefoneEmergenciaCliente);
+
+		escreva("Primeiro objetivo a ser alcançado: ");
+		leia(objetivo1Cliente);
+
+		escreva("Segundo objetivo a ser alcaçado: ");
+		leia(objetivo2Cliente);
+
+		escreva("Possu doenças graves? Sim ou Nao: ");
+		leia(doencasCliente);
+
+	//Escrita dos dados coletados em tela
+		escreval("");
+		escreval("________________________________________________________________________________");
+		escreval("-		" + "Confira os dados abaixo antes de confirmar o cadastro");
+		escreval("-		" + "Nome: " + nomeCliente);
+		escreval("-		" + "Idade: " + idadeCliente);
+		escreval("-		" + "Endereco: " + enderecoCliente);
+		escreval("-		" + "Telefone: " + telefoneEmergenciaCliente);
+		escreval("-		" + "1o Objetivo: " + objetivo1Cliente);
+		escreval("-		" + "2o Objetivo: " + objetivo2Cliente);
+		escreval("-		" + "Possui doenças: " + doencasCliente);
+		escreval("_______________________________________________________________________________");
+fimPrincipal
