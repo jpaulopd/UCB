@@ -1,0 +1,48 @@
+algoritmo semNome;
+// Síntese: Algotimo de identificação da cidade por meio do DDD inserido pelo usuário
+//  Objetivo:  Identificar a cidade por meio do DDD informado
+//  Entrada : DDD da cidade
+//  Saída   : Nome da cidade
+
+
+principal
+	// Declarações
+		inteiro DDD;
+		texto cidade;
+	// Instruções
+		//Título do programa
+		escreval("********************* Identificador de cidades por DDD *********************");
+		escreval("*************** Digite o DDD " 
+				+ "com 2 dígitos "
+				+ "para descobrir a cidade vinculada"
+				+ "***************");
+		//Entrada dos dados
+		escreva("Digite o DDD da cidade: ");
+		leia(DDD);
+		//Seleção conforme dados inserido
+		escolha(DDD)
+			caso 31
+				escreval("Belo Horizonte"); //Saída
+				interrompa;
+			caso 61
+				escreval("Brasília"); //Saída
+				interrompa;
+			caso 41
+				escreval("Curitiba"); //Saída
+				interrompa;
+			caso 48
+				escreval("Florianópolis"); //Saída
+				interrompa;
+			caso 51
+				escreval("Porto Alegre"); //Saída
+				interrompa;
+			caso 21
+				escreval("Rio de Janeiro"); //Saída
+				interrompa;
+			caso 11
+				escreval("São Paulo"); //Saída
+				interrompa;
+			outroCaso
+				escreval("Cidade não identificado pelo DDD informado"); //Saída
+		fimEscolha
+fimPrincipal
