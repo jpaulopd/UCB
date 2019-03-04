@@ -10,13 +10,41 @@ principal
 	inteiro voto, votosAdamastor, votosBenedito, votosCamelia;
 	// Instruções
 
+	votosAdamastor = 0;
+	votosBenedito = 0;
+	votosCamelia = 0;
+
 	faca
 		escreval("Lista dos candidatos");
-			
+		escreval("12 - Adamastor");
+		escreval("23 - Benedito");
+		escreval("45 - Camélia");
+		escreva("Digite o número do candidato: ");
+		leia(voto);
+		escolha(voto)
+		caso 12
+			votosAdamastor = votosAdamastor + 1 ;
+			interrompa;
+		caso 23
+			votosBenedito = votosBenedito + 1;
+			interrompa;
+		caso 45
+			votosCamelia = votosCamelia + 1;
+			interrompa;
+		fimEscolha
+	enquanto (voto != 0);
 
-	enquanto (nota > 0);
-
-	media = soma / 5;
-	escreval("A média da turma é ", media:3:1);
-
+	se ((votosAdamastor > votosBenedito) e (votosAdamastor > votosCamelia)) entao
+		escreva("Prefeito eleito é Adamastor");
+	senao
+		se((votosBenedito > votosAdamastor) e (votosBenedito > votosCamelia)) entao
+			escreva("Prefeito eleito é Benedito");
+		senao
+			se ((votosCamelia > votosAdamastor) e (votosCamelia > votosAdamastor)) entao
+				escreva("Prefeita eleita é Camélia");
+			senao
+				escreva("Houve empate!");
+			fimSe
+		fimSe
+	fimSe
 fimPrincipal
