@@ -1,0 +1,19 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:  
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	
+		inteiro numero, linha;
+	// Instruções
+		escreva("Qual tabuada você quer? ");
+		leia(numero);
+		para (linha de 1 ate 10 passo 1) faca
+			escreval(numero, " x ", linha, " = ", numero*linha);
+		fimPara
+	
+fimPrincipal

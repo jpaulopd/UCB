@@ -1,0 +1,29 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	inteiro aluno;
+	real nota, soma, media;
+	// Instruções
+	soma = 0;
+	aluno = 0;
+	escreval("Nota negativa encerra a digitação");
+	faca
+
+		escreva("Digite a nota do aluno: ");
+		leia(nota);
+		se(nota > 0) entao
+			soma = soma + nota;
+			aluno = aluno + 1;
+		fimSe
+	enquanto (nota > 0);
+
+	media = soma / 5;
+	escreval("A média da turma é ", media:3:1);
+
+fimPrincipal

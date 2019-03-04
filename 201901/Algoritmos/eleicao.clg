@@ -1,0 +1,22 @@
+algoritmo eleicao;
+// Síntese
+//  Objetivo: executar uma eleição para prefeito
+//  Entrada : voto do eleitor
+//  Saída   : nome do prefeito OU empate
+
+
+principal
+	// Declarações
+	inteiro voto, votosAdamastor, votosBenedito, votosCamelia;
+	// Instruções
+
+	faca
+		escreval("Lista dos candidatos");
+			
+
+	enquanto (nota > 0);
+
+	media = soma / 5;
+	escreval("A média da turma é ", media:3:1);
+
+fimPrincipal

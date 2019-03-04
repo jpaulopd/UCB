@@ -1,0 +1,22 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:  
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+		inteiro aluno;
+		real nota, soma, media;
+	// Instruções
+		soma = 0;
+
+		para (aluno de 1 ate 5 passo 1) faca
+			escreva("Digite a note do ", aluno, "o aluno: ");
+			leia(nota);
+			soma = soma + nota;
+		fimPara
+		media = soma /5;
+		escreva("A média da turma é ", media:3:1);
+fimPrincipal
