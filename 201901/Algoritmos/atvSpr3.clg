@@ -1,7 +1,7 @@
 algoritmo relacaoCombinacoesMegasena;
 // Síntese
 //  Objetivo:  DEMONSTRAR AS COMBINACAÇÕES POSSÍVEIS DA MEGASENA
-//  Entrada :  USUARIO INFORMA NUMERO A SER FATORADO
+//  Entrada :  NÃO HÁ ENTRADA DE DADOS
 //  Saída   :  IMPRIME TOTAL DE COMBINAÇÕES E CADA COMBINAÇÃO POSSÍVEL
 // 	DEV		: JOAO PAULO PIRES DANTAS
 
