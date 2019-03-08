@@ -1,0 +1,20 @@
+algoritmo relacaoCombinacoesMegasena;
+// Síntese
+//  Objetivo:  DEMONSTRAR AS COMBINACAÇÕES POSSÍVEIS DA MEGASENA
+//  Entrada :  NÃO HÁ
+//  Saída   :  IMPRIME TOTAL DE COMBINAÇÕES E CADA COMBINAÇÃO POSSÍVEL
+// 	DEV		: JOAO PAULO PIRES DANTAS
+
+principal
+	// Declarações
+		inteiro total, fatorial, numerador, denominador, n;
+	// Instruções
+		escreval("Digite o numero a ser fatorado: ");
+		leia(fatorial);
+		para (n de fatorial-1 ate 1 passo -1) faca
+			total = fatorial * n;
+			
+		fimPara
+		escreval("Fatorial de ", fatorial " é igual: ", total);
+		escreva("fim");
+fimPrincipal

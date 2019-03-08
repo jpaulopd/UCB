@@ -1,9 +1,9 @@
-algoritmo semNome;
+algoritmo localizadorDDD;
 // Síntese: Algotimo de identificação da cidade por meio do DDD inserido pelo usuário
 //  Objetivo:  Identificar a cidade por meio do DDD informado
 //  Entrada : DDD da cidade
 //  Saída   : Nome da cidade
-
+// Dev      : JOAO PAULO PIRES DANTAS
 
 principal
 	// Declarações
