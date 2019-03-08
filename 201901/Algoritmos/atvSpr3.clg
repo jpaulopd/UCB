@@ -1,20 +1,57 @@
 algoritmo relacaoCombinacoesMegasena;
 // Síntese
 //  Objetivo:  DEMONSTRAR AS COMBINACAÇÕES POSSÍVEIS DA MEGASENA
-//  Entrada :  NÃO HÁ
+//  Entrada :  USUARIO INFORMA NUMERO A SER FATORADO
 //  Saída   :  IMPRIME TOTAL DE COMBINAÇÕES E CADA COMBINAÇÃO POSSÍVEL
 // 	DEV		: JOAO PAULO PIRES DANTAS
 
 principal
 	// Declarações
-		inteiro total, fatorial, numerador, denominador, n;
+	inteiro contador,i,c1,c2,c3,c4,c5,c6;
+	real numerador, denominador, diferenca, resultado;
 	// Instruções
-		escreval("Digite o numero a ser fatorado: ");
-		leia(fatorial);
-		para (n de fatorial-1 ate 1 passo -1) faca
-			total = fatorial * n;
+	//fórmula da Combinação Simples = n! / (p!*(n-p)!)
+	//n = numerador
+	//p = denominador
+	//n-p = diferenca
+	numerador = 1; //inicialização das variáveis que serão calculadas
+	denominador = 1;
+	diferenca = 1;
+	contador = 0;
+	para (i de 1 ate 60 passo 1) faca //calcula fatorial no numerador, no caso 60 números totais
+		numerador = numerador * i; 
+	fimPara
+	para (i de 1 ate 6 passo 1) faca //calcula fatorial do denominador, no caso 6 números para 1 jogo
+		denominador = denominador * i; 
+	fimPara
+		para (i de 1 ate 54 passo 1) faca //calcula fatorial da diferenca
+		diferenca = diferenca * i; 
+	fimPara
+	
+	//imprime todas as combinações possíveis para 1 jogo de 6 números	
+		para (c1 de 1 ate 60 passo 1) faca
 			
+			para (c2 de c1+1 ate 60 passo 1) faca
+
+				para (c3 de c2+1 ate 60 passo 1) faca
+
+					para (c4 de c3+1 ate 60 passo 1) faca
+
+						para (c5 de c4+1 ate 60 passo 1) faca
+
+							para (c6 de c5+1 ate 60 passo 1) faca
+							
+							contador = contador + 1;
+						
+							escreval("Combinação ",contador," (", c1," , ",c2," , ",c3," , ",c4," , ",c5," , ",c6,") ");
+							fimPara
+						fimPara
+					fimPara
+				fimPara
+			fimPara
 		fimPara
-		escreval("Fatorial de ", fatorial " é igual: ", total);
-		escreva("fim");
+	resultado = numerador/(denominador*diferenca); //calcula a combinação possível
+	escreval("O total de combinações possíveis da MegaSena usando a fórmula é de ", resultado:1:0); //escreva o resultado da combincao calculada pela formula
+	escreval("Total combinações contadas foi de ", contador); //escreve o resultado de cada contagem das combinações impressas
+	escreva("fim");
 fimPrincipal
