@@ -1,0 +1,57 @@
+algoritmo buscaBinaria;
+// Síntese
+//  Objetivo:  Localizar um número em um vetor de 1 a 100
+//  Entrada :  Número informado pelo usuário
+//  Saída   :  Impressao na tela informando posicao do numero no vetor e quantidade de tentativas realizadas
+// Developer: JOAO PAULO PIRES DANTAS
+
+principal
+	// Declarações
+	inteiro i, vetor[100], numeroBusca, posicaoInicial, posicaoFinal, posicaoMeio, contador; 
+	logico numeroEncontrado;
+	
+	// Instruções
+	
+	//INCIALIZAÇÃO DAS VARIAVEIS E DO VETOR COM INCLUSAO DOS NUMEROS
+
+	posicaoInicial = 0;
+	posicaoFinal = 99;
+	contador = 0;
+	numeroEncontrado = falso;
+	
+	escreval("Vetor contendo números ordenados de 1 a 100");
+	escreval("--------------------------------------------");
+	para (i de 0 ate 99 passo 1) faca
+		vetor[i] = i+1; //NECESSARIO SOMAR +1 PARA CADA INTERACAO A FIM DE COMPLETAR OS 100 NUMEROS
+		escreval("[",vetor[i],"]"); //ESCRITA EM TELA DO VETOR
+	fimPara
+	escreval("");
+	escreval("--------------------------------------------");
+	escreval("Digite um número para buscar no vetor: "); //ENTRADA DE DADOS DO USUARIO
+	leia(numeroBusca);
+
+	//TESTE CONDICIONAL PARA VERIFICAR SE O USUARIO DIGITA O NÚMERO DENTRO DA FAIXA DE 1 A 100
+	se (numeroBusca < 1 ou numeroBusca > 100) entao
+		escreval("O número ", numeroBusca, " não pode ser localizado no vetor de 1 a 100. Favor digitar número válido!");
+	senao //INICIO DA BUSCA BINARIA
+		
+		enquanto (posicaoInicial <= posicaoFinal e nao numeroEncontrado) faca //ESTRUTURA REPETICAO QUE PERMITE VARRER O VETOR ATÉ ENCONTRAR O NÚMERO
+			posicaoMeio = (posicaoInicial + posicaoFinal) / 2; //MOTOR DA BUSCA BINARIA. REDUZ O ESPAÇO DE BUSCA DO NUMERO A CADA ITERAÇÃO
+			se (vetor[posicaoMeio] == numeroBusca) entao //TESTE QUE LOCALIZA NÚMERO E ENCERRA ESTRUTURA ENQUANTO
+				numeroEncontrado = verdadeiro;
+			fimSe
+			se (vetor[posicaoMeio] > numeroBusca) entao //TESTE QUE ATUALIZA MOTOR BUSCA BINARIA 
+				posicaoFinal = posicaoMeio - 1;
+			senao
+				posicaoInicial = posicaoMeio + 1;
+			fimSe
+			contador = contador +1; //CONTADOR DE ITERAÇÕES
+		fimEnquanto
+	fimSe
+
+	se (numeroEncontrado == verdadeiro) entao
+		escreval("O número ", vetor[posicaoMeio]," foi encontrado!");
+		escreval("Foram necessários ", contador," tentativas para encontrar o número.");
+	fimSe
+	
+fimPrincipal
